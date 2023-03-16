@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS 4</title>
+</head>
+<body>
+    
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+      
+        th, td {
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        
+        tr:hover {
+            background-color: #f5f5f5;
+        }
+        
+        input[type=text] {
+            padding: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #f1f1f1;
+            font-size: 16px;
+            color: #333;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        input[type=text]:focus {
+            outline: none;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+            background-color: #fff;
+        }
+
+        button {
+            background-color: #4CAF50; /* Warna latar belakang */
+            color: white; /* Warna teks */
+            padding: 10px 20px; /* Ukuran padding */
+            border: none; /* Tidak ada border */
+            border-radius: 5px; /* Border radius */
+            cursor: pointer; /* Ubah tampilan kursor saat hover */
+            transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang saat hover */
+        }
+
+        button:hover {
+            background-color: #3e8e41; /* Warna latar belakang saat hover */
+        }
+
+        body {
+            background-color: #f5f5f5; /* Warna latar belakang utama */
+            background-image: linear-gradient(to bottom right, #fefefe, #d3d3d3); /* Efek gradient */
+        }
+
+        #kulkas {
+            background-color: #fff; /* Warna latar belakang kalkulator */
+            border-radius: 5px; /* Border radius */
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.2); /* Shadow */
+            padding: 20px; /* Padding */
+            max-width: 700px; /* Lebar maksimum */
+            margin: 50px auto; /* Posisi tengah */
+        }
+    </style>
+    
+
+    <div id="kulkas">
+        <center>
+            <div style="padding: 10px 0 50px 0;">
+                <h1>Kalkulator Jelek</h1>
+                <small>By Hafiz</small>
+                <hr>
+            </div>
+        </center>
+
+        <form id="kalkulator">
+            <table cellpadding="40">
+                <tr>
+                    <th>Angka 1 :</th>
+                    <td colspan="4"><input type="text" name="angka1" placeholder="Masukan angka pertama"></td>
+                </tr>
+                <tr>
+                    <th>Angka 2 :</th>
+                    <td colspan="4"><input type="text" name="angka2" placeholder="Masukan angka kedua"></td>
+                </tr>
+                <tr>
+                    <th>Hasil :</th>
+                    <td colspan="4"><input type="text" name="hasil" disabled></td>
+                </tr>
+                <tr>
+                    <td><button type="button" name="btn_tambah" onclick="tambah()">+</button></td>
+                    <td><button type="button" name="btn_tambah" onclick="kurang()">-</button></td>
+                    <td><button type="button" name="btn_tambah" onclick="kali()">x</button></td>
+                    <td><button type="button" name="btn_tambah" onclick="bagi()">/</button></td>
+                    <td><button type="button" name="btn_tambah" onclick="pangkat()">Pangkat</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    
+
+
+    <script src="kalkulator.js"></script>
+</body>
+</html>
